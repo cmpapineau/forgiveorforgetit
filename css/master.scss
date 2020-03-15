@@ -1,0 +1,321 @@
+@import "partials/_variables";
+@import "partials/_fonts";
+
+body{
+  color: #333;
+  background: $bgmain;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  font-family: $body;
+}
+h1, h2, h3,{
+  color: $head;
+  font-family: $header;
+}
+
+h4{
+    font-family: $header;
+    color: $subhead;
+}
+
+#main{
+  background: $bgcontainer;
+  padding: 0;
+  display: block;
+  padding: 1rem;
+  #empty{
+    margin-top: 1rem;
+  }
+    h1{
+      font-size: 2.2rem;
+    }
+    h3{
+      font-family: $bodybold;
+      color: $head;
+      font-size: 1.2rem;
+    }
+    #bio{
+      padding: 0 3rem;
+
+    }
+    #bookpic{
+    display: block;
+    //  float:left;
+    //  margin-right: 30px;
+    //  margin-left: 5%;
+      //border-radius: 20px 0 0 0;
+      // box-shadow: 3px 3px 5px black;
+  width: 80%;
+    }
+    #details{
+      display: block;
+    }
+    //TRYING TO MAKE THE BUTTONS USING LIST. MIGHT TRY SOMETHING ELSE.
+.newbtn{
+  ul{
+    list-style: none;
+    margin-left: 5%;
+    width: 100%;
+    li{
+        padding: 25px;
+        width: 100%;
+
+        a{ // gives the box the size
+          text-decoration: none;
+          color: white;
+          background-color: $btn-normal;
+          padding: 4%;
+          border-radius: 5px;
+          width: 100%;
+        }
+        a:hover{
+          color: $head;
+          background-color: $btn-hover;
+          font-weight: bold;
+          border-bottom: .1rem solid white;
+        }
+
+      }
+    } // ul end
+  }// end of new btn
+} // end of main
+/*
+#shake-img{
+    img{
+      border-radius: 10px;
+      border: 1px solid $head;
+    }
+  }
+*/
+/* =========================================================================
+TESTIMONIALS
+============================================================================*/
+
+.container article{
+  margin: 2rem 5rem;
+  border-top: 1px solid $hr;
+  p{
+    margin-bottom: .5rem;
+    span{
+      // border-top: 1px solid $dkgrey;
+      // border-bottom: 1px solid $dkgrey;
+      //padding: .5rem 0;
+      font-style: italic;
+      margin-right: 3rem;
+      font-size: .9rem;
+    }
+  }
+
+}
+
+#header{
+  padding: 0;
+  background: $head;
+  //position: fixed;
+}
+
+header{
+  padding-bottom: 1rem;
+  .container{
+    padding: 0;
+    margin-left: -1rem;
+    height: 2rem;
+  }
+
+  #logo{
+    // background-color: white;
+    // border-radius: 0 0 .5rem .5rem;
+    //background-image: url("../img/title.png"); background-image is not going right
+    width: 100%; // WAS 80%
+    height: auto;
+  //  padding-top: .5rem;
+  //  padding-bottom: .5rem;
+    //margin-left: 1rem;
+  }
+
+}
+
+#top-shade{
+  border-bottom: 3px solid rgba(0,0,0,.3);
+}
+
+.bg-dark {
+    background-color: $head!important;
+}
+
+// #nav-container{
+//   max-width:
+// }
+
+nav{
+  float: right;
+  a{
+    color: white;
+  }
+  .nav-link{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  a:hover{
+    color: #999;
+    font-weight: bold;
+    border-bottom: .1rem solid white;
+  }
+  .white{
+    color: white;
+  }
+  li{
+    display: inline-block;
+    padding: 0 .5rem;
+    float: left;
+  }
+} /* close nav */
+
+.navbar-toggler{
+  .fa{
+    color: white;
+    font-size: 2rem;
+  }
+}
+
+
+.design-title{
+  border-top: 5px solid $title;
+  // border-bottom: 10px solid $title;
+  padding:.5rem 0;
+  span{
+    font-size: 2rem;
+  }
+}
+
+
+
+footer{
+  background-color: $footer;
+  color: white;
+  // margin-top: .5rem;
+  padding: .2rem 0;
+  line-height: 2rem;
+  border-top: 3px solid rgba(0,0,0,.3);
+  small{
+    font-family: $body;
+    font-size: 1rem;
+    display: inline-block;
+    // padding: 0 1rem;
+    color: white;
+    // line-height: 2rem;
+    // padding: 0 1rem;
+  }
+  a{
+    font-family: $body;
+    display: inline-block;
+    // padding: 0 1rem;
+    color: white;
+    line-height: 2rem;
+    padding: 0 1rem;
+  }
+  a:hover{
+    text-decoration: underline;
+    color: white;
+    // padding: 0 1rem;
+    // border-bottom: 1px solid white;
+    line-height: 2rem;
+  }
+}
+
+// #footer{
+//
+// }
+// phones
+
+/* ==========================================================================
+MOBILE PHONES HERE
+========================================================================== */
+@media (max-width: 576px) and (min-width: 320px) {
+
+  #main{
+    h1{
+      font-size: 1rem;
+    }
+  }
+#markpic{
+  padding-bottom: 2rem;
+}
+  #bookpic{
+    display: block;
+    float:none!important;
+    width: 100%!important;
+    margin-right: 0px!important;
+  }
+
+  // TRY TO ADJUST THE BUTTON THAT ARE IN UL
+  ul{
+    list-style: none;
+    margin-left: 1%!important;
+  } // ul end
+
+  .design-title{
+    border-top: 0px solid $title;
+    // border-bottom: 10px solid $title;
+    padding:.5rem 0;
+    span{
+      font-size: 2rem;
+    }
+  }
+} // close mobile
+
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  iframe{
+    margin: 2%;
+    width: 90%;
+    height: auto;
+    border: 0;
+  }
+
+  .faves{
+    margin-top: 0;
+    a{
+      color: $head;
+      font-size: .8rem;
+    } // close .faves a
+  } // close .faves
+  #bio{
+    h1, h2, h3, h4, p {
+      text-align: left;
+    }
+    h1{
+      font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1rem;
+    } /* close h2 */
+    h4{
+      font-size: .9rem;
+    }
+    p{
+      font-size: .8rem;
+    }
+  }
+
+  #bookpic{
+    display: block;
+    width: 100%;
+  }
+
+  .title{
+    width: 40%;
+    i{
+      font-size: .8rem;
+    }
+  }
+} // close tablet
+
+@media screen and (max-width: 991px) and (min-width: 768px){
+  nav{
+    margin-top: -3rem;
+  }
+}
+/* close media query */
